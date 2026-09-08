@@ -1,7 +1,7 @@
 plugins { id 'com.android.application' }
 
-android { namespace 'com.brainrotheist'; compileSdk 36
-    defaultConfig { applicationId 'com.brainrotheist'; minSdk 23; targetSdk 36; versionCode 1; versionName '1.0.1' }
+android { namespace 'com.brainrotheist'; compileSdk 35
+    defaultConfig { applicationId 'com.brainrotheist'; minSdk 23; targetSdk 35; versionCode 1; versionName '1.0.2' }
     buildTypes { release { minifyEnabled false } }
 }
 
