@@ -1,0 +1,12 @@
+plugins { id 'com.android.application' }
+
+android { namespace 'com.brainrotheist'; compileSdk 37
+    defaultConfig { applicationId 'com.brainrotheist'; minSdk 23; targetSdk 37; versionCode 1; versionName '1.0.0' }
+    buildTypes { release { minifyEnabled false } }
+}
+
+tasks.register('syncWebAssets', Sync) {
+    from(rootProject.projectDir.parent) { include 'index.html'; include 'style.css'; include 'manifest.json'; include 'sw.js'; include 'js/**' }
+    into(layout.projectDirectory.dir('src/main/assets'))
+}
+tasks.named('preBuild').configure { dependsOn(tasks.named('syncWebAssets')) }
