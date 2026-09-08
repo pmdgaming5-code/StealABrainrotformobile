@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#0b1220">
+<meta name="description" content="Brainrot Heist — original offline browser collection and strategy game">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+<title>Brainrot Heist</title>
+</head>
+<body>
+<div id="app">
+<canvas id="gameCanvas" aria-label="Brainrot Heist game"></canvas>
+<div id="loading" class="screen"><div class="loader-card"><div class="brand">BRAINROT HEIST</div><div id="loadingText">Loading World...</div><div class="progress"><i id="loadingBar"></i></div></div></div>
+<div id="menu" class="screen hidden"><div class="menu-card"><div class="logo">BRAINROT<br><span>HEIST</span></div><p class="tagline">Collect. Stack. Sneak. Rebirth.</p><button data-action="play" class="primary">PLAY</button><div class="menu-grid"><button data-action="index">INDEX</button><button data-action="shop">SHOP</button><button data-action="rewards">REWARDS</button><button data-action="fusion">FUSION</button><button data-action="stats">STATS</button><button data-action="settings">SETTINGS</button></div><div class="tip">8-slot local server · 1 human + 7 bots</div></div></div>
+<div id="hud" class="hidden">
+<div class="topbar"><div class="pill"><span>💰</span><b id="cash">$100</b></div><div class="pill"><span>⚡</span><b id="income">$0/s</b></div><div class="pill level"><span>LV</span><b id="level">1</b><small id="xp">0/100 XP</small></div><button id="menuBtn" class="iconbtn">☰</button></div>
+<div id="feed" class="feed"></div><div id="eventBanner" class="event-banner hidden"></div>
+<div class="side-actions"><button data-action="index">INDEX</button><button data-action="rebirth">REBIRTH</button><button data-action="shop">SHOP</button><button data-action="rewards">REWARDS</button><button data-action="fusion">FUSION</button><button data-action="stats">STATS</button></div>
+<div id="interaction" class="interaction hidden"><b id="interactionTitle">INTERACT</b><button id="interactionBtn">ACTION</button></div>
+<div id="mobileControls" class="mobile-controls"><div id="joystick" class="joystick"><div id="stick"></div></div><div class="mobile-actions"><button id="collectBtn">COLLECT</button><button id="stealBtn" class="danger">STEAL</button><button id="lockBtn">LOCK</button></div></div>
+<div id="debug" class="debug hidden"></div>
+</div><div id="modalRoot"></div><div id="toastRoot"></div>
+</div>
+<script src="js/config.js"></script>
+<script src="js/systems.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/world.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/game.js"></script>
+<script src="js/main.js"></script>
+<script src="js/final_patch.js"></script>
+</body></html>
